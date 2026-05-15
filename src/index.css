@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root styles */
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-['DM_Sans'] transition-colors duration-300;
+}
+
+/* Utility classes */
+.btn-gold {
+  @apply px-6 py-3 bg-gradient-to-r from-gold-dark to-gold text-black font-semibold rounded-full hover:scale-105 transition shadow-lg shadow-yellow-900/50;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border border-navy dark:border-white/30 text-navy dark:text-white rounded-full hover:bg-navy hover:text-white dark:hover:bg-white/10 transition;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 transition;
+}
+
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+/* Animations */
+@keyframes bounce-3d {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-3d {
+  animation: bounce-3d 1s infinite;
+}
